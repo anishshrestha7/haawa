@@ -1,15 +1,37 @@
-import React from 'react'
-import one from "../assets/description/sm-1.jpg"
-import two from "../assets/description/sm-2.jpg"
-import three from "../assets/description/sm-3.jpg"
-import four from "../assets/description/sm-4.jpg"
-import five from "../assets/description/sm-5.jpg"
-import six from "../assets/description/sm-6.jpg"
+import React, { useState } from 'react'
 import nletter from "../assets/description/1.jpg"
+import { desFamily, desTours } from '../Data'
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+// import required modules
+import { Pagination } from 'swiper/modules';
 
 function Destination() {
+ const [swiperRef, setSwiperRef] = useState(0);
+ const [familySwiper, setFamilySwiper] = useState(0);
+
+const nextSlide = () => {
+  if (swiperRef) swiperRef.slideNext();
+};
+
+const prevSlide = () => {
+  if (swiperRef) swiperRef.slidePrev();
+};
+
+const nexttSlide = () => {
+  if (familySwiper) familySwiper.slideNext();
+};
+const prevvSlide = () => {
+  if (familySwiper) familySwiper.slidePrev();
+};
+
+
   return (
     <>
+
+     
    <section className=' dis-hero mb'>
     <h2 className='sir absolute'>Destination </h2>
     <div className='flex absolute ai gap saki'>
@@ -26,92 +48,76 @@ function Destination() {
       <button>View All Destination</button>
     </div>
    </section>
- {/* group tour section */}
+
 <section className="container lik flex ai sb">
   <h2 className='mb'>Group Tour</h2>
   <div>
-    <i class="bi bi-caret-left"></i>
-     <i class="bi bi-caret-right"></i>
+    <i onClick={prevSlide} className="bi bi-caret-left"></i>
+    <i onClick={nextSlide} className="bi bi-caret-right"></i>
   </div>
 </section>
-{/* group tour image section */}
+
+{/* group tour image section  starts here*/}
 
 <section className='container mik flex sb'>
-    <div>
-      <img src={one} alt="" />
-      <h3 className='jc ai flex'>Venice</h3>
-      <p className='jc ai flex'>306 Tours</p>
+    <Swiper
+    onSwiper={setSwiperRef}
+        slidesPerView={6}
+        spaceBetween={30}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Pagination]}
+        className="mySwiper"
+      >
+  {desTours.map((a=>(
+    <SwiperSlide>
+      <div>
+      <img src={a.image} alt="" />
+      <h3 className='jc ai flex'>{a.name}</h3>
+      <p className='jc ai flex'>{a.des}</p>
       </div>
-       <div>
-      <img src={two} alt="" />
-      <h3 className='jc ai flex'>Bali</h3>
-      <p className='jc ai flex'>256 Tours</p>
-      </div>
-       <div>
-      <img src={three} alt="" />
-      <h3 className='jc ai flex'>James Bond Island</h3>
-      <p className='jc ai flex'>256 Tours</p>
-      </div>
-       <div>
-      <img src={four} alt="" />
-      <h3 className='jc ai flex'>Phuket</h3>
-      <p className='jc ai flex'>256 Tours</p>
-      </div>
-       <div>
-      <img src={five} alt="" />
-      <h3 className='jc ai flex'>Chiang Mai</h3>
-      <p className='jc ai flex'>226 Tours</p>
-      </div>
-       <div>
-      <img src={six} alt="" />
-      <h3 className='jc ai flex'>Bana Hills</h3>
-      <p className='jc ai flex'>126 Tours</p>
-      </div>
+      </SwiperSlide>
+       )))}
+       </Swiper>
+      
 </section>
+{/* group tour image section ends here */}
 
-{/* family tour section */}
 <section className="container lik flex ai sb">
   <h2 className='mb'>Family Tour</h2>
   <div>
-    <i class="bi bi-caret-left"></i>
-     <i class="bi bi-caret-right"></i>
+    <i onClick={prevvSlide} className="bi bi-caret-left"></i>
+    <i onClick={nexttSlide} className="bi bi-caret-right"></i>
   </div>
 </section>
-{/* group tour image section */}
+
+{/* family tour image section starts here*/}
 
 <section className='container mik flex sb'>
-       <div>
-      <img src={four} alt="" />
-      <h3 className='jc ai flex'>Phuket</h3>
-      <p className='jc ai flex'>256 Tours</p>
-      </div>
-       <div>
-      <img src={five} alt="" />
-      <h3 className='jc ai flex'>Chiang Mai</h3>
-      <p className='jc ai flex'>226 Tours</p>
-      </div>
-       <div>
-      <img src={six} alt="" />
-      <h3 className='jc ai flex'>Bana Hills</h3>
-      <p className='jc ai flex'>126 Tours</p>
-      </div>
-      <div>
-      <img src={one} alt="" />
-      <h3 className='jc ai flex'>Venice</h3>
-      <p className='jc ai flex'>306 Tours</p>
-      </div>
-       <div>
-      <img src={two} alt="" />
-      <h3 className='jc ai flex'>Bali</h3>
-      <p className='jc ai flex'>256 Tours</p>
-      </div>
-       <div>
-      <img src={three} alt="" />
-      <h3 className='jc ai flex'>James Bond Island</h3>
-      <p className='jc ai flex'>256 Tours</p>
-      </div>
+<Swiper
+  onSwiper={setFamilySwiper} 
+  slidesPerView={6}
+        spaceBetween={30}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Pagination]}
+        className="mySwiper"
+      >
+        {desFamily.map((a=>(
+        <SwiperSlide><div>
+      <img src={a.image} alt="" />
+      <h3 className='jc ai flex'>{a.name}</h3>
+      <p className='jc ai flex'>{a.des}</p>
+      </div></SwiperSlide>
+       )))}
+      </Swiper>
+    
+      
+       
 </section>
-
+{/* group tour image section ends here*/}
     <section className="container pika flex ai ">
       <div className='pichu'>
         <img src={nletter} alt="" />
@@ -127,8 +133,7 @@ function Destination() {
       </div>
     </section>
 
-
-    </>
+       </>
   )
 }
 

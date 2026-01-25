@@ -3,23 +3,13 @@ import one from "../assets/image/1.jpg"
 import two from "../assets/image/2.jpg"
 import three from "../assets/image/3.jpg"
 import four from "../assets/image/4.jpg"
-import pOne from "../assets/image/pop/one.jpg"
-import pTwo from "../assets/image/pop/two.jpg"
-import pThree from "../assets/image/pop/three.jpg"
-import fOne from "../assets/image/featured/1.jpg"
-import fTwo from "../assets/image/featured/2.jpg"
-import fThree from "../assets/image/featured/3.jpg"
-import fFour from "../assets/image/featured/4.jpg"
-import fFive from "../assets/image/featured/5.jpg"
-import fSix from "../assets/image/featured/6.jpg"
 import defining from "../assets/image/featured/defining.jpg"
 import definingsm from "../assets/image/featured/defining-sm1.jpg"
-import tone from "../assets/image/tour/1.jpg"
-import ttwo from "../assets/image/tour/2.jpg"
-import tthree from "../assets/image/tour/3.jpg"
-import tfour from "../assets/image/tour/4.jpg"
+import { gTours, popDestination, tourPackage } from '../Data'
+
 
 function Home() {
+  const layoutClasses = ["a", "b", "c", "d"];
   return (
     <>
      <div>
@@ -88,53 +78,23 @@ function Home() {
   </section>
   {/* pop des thumbnail page starts */}
   <section className="con gg">
-    <div className="pop-des p12">
-      <div className="kk">
+    <div className="pop-des p12 flex">
+      {popDestination.map((a)=>(
+      <div className="kk" key={a.id}>
         <div className="rr">
-          <img src={pOne} alt />
+          <img src={a.image} alt />
         </div>
         <div className="flex sb">
           <div className>
-            <h2>Mythic Haven</h2>
-            <p>356 Tours, 248 Activities</p>
+            <h2>{a.name}</h2>
+            <p>{a.des}</p>
           </div>
           <div className="btn1">
             <button><i className="bi bi-arrow-up-right" /></button>
           </div>
         </div>
       </div>
-    </div>
-    <div className="pop-des p 12">
-      <div className="kk">
-        <div className="rr">
-          <img src={pTwo} alt />
-        </div>
-        <div className="flex sb">
-          <div className>
-            <h2>Shadow Peak</h2>
-            <p>356 Tours, 248 Activities</p>
-          </div>
-          <div className="btn1">
-            <button><i className="bi bi-arrow-up-right" /></button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div className="pop-des p12">
-      <div className="kk">
-        <div className="rr">
-          <img src={pThree} alt />
-        </div>
-        <div className="flex sb">
-          <div className>
-            <h2>Silver Realms</h2>
-            <p>356 Tours, 248 Activities</p>
-          </div>
-          <div className="btn1">
-            <button><i className="bi bi-arrow-up-right" /></button>
-          </div>
-        </div>
-      </div>
+       ))}
     </div>
   </section>
   {/* featured tours page starts here */}
@@ -156,100 +116,26 @@ function Home() {
   </section>
   {/* featured card page starts here */}
   <section className="con gg ">
-    <div className="card-con ">
+
+
+       {gTours.map((a)=>(
+    <div className="card-con" key={a.id}>
       <div className="rrr flex flex-dir">
-        <img src={fOne} alt />
+        <img src={a.image} alt />
       </div>
       <div className="card-bot">
-        <h2>California Sunset/Twilight Boat Cruise</h2>
+        <h2>{a.name}</h2>
         <div className="flex gap40 gray mb">
-          <p>2 days 3 nights</p>
-          <p>4-6 guest</p>
+          <p>{a.des}</p>
+          <p>{a.des1}</p>
         </div>
         <div className="flex sb ai gap">
-          <p> <span className="bold">$48.25</span> <span className="gray">/ person</span></p>
-          <button>Book Now</button>
+          <p> <span className="bold">{a.price}</span> <span className="gray">{a.person}</span></p>
+          <button>{a.button}</button>
         </div>
       </div>
     </div>
-    <div className="card-con">
-      <div className="rrr flex flex-dir">
-        <img src={fTwo} alt />
-      </div>
-      <div className="card-bot">
-        <h2>Pacific Coastal Evening Sailing Tours</h2>
-        <div className="flex gap40 gray mb">
-          <p>2 days 3 nights</p>
-          <p>4-6 guest</p>
-        </div>
-        <div className="flex sb ai gap">
-          <p> <span className="bold">$48.25</span> <span className="gray">/ person</span></p>
-          <button>Book Now</button>
-        </div>
-      </div>
-    </div>
-    <div className="card-con">
-      <div className="rrr flex flex-dir">
-        <img src={fThree} alt />
-      </div>
-      <div className="card-bot">
-        <h2>Golden Gate Sunset Bay Cruise Voyage</h2>
-        <div className="flex gap40 gray mb">
-          <p>2 days 3 nights</p>
-          <p>4-6 guest</p>
-        </div>
-        <div className="flex sb ai gap">
-          <p> <span className="bold">$48.25</span> <span className="gray">/ person</span></p>
-          <button>Book Now</button>
-        </div>
-      </div>
-    </div>
-    <div className="card-con">
-      <div className="rrr flex flex-dir">
-        <img src={fFour} alt />
-      </div>
-      <div className="card-bot">
-        <h2>Laguna Beach Twilight Ocean Yacht Ride</h2>
-        <div className="flex gap40 gray mb">
-          <p>2 days 3 nights</p>
-          <p>4-6 guest</p>
-        </div>
-        <div className="flex sb ai gap">
-          <p> <span className="bold">$48.25</span> <span className="gray">/ person</span></p>
-          <button>Book Now</button>
-        </div>
-      </div>
-    </div>
-    <div className="card-con">
-      <div className="rrr flex flex-dir">
-        <img src={fFive} alt />
-      </div>
-      <div className="card-bot">
-        <h2>Laguna Beach Twilight Ocean Yacht Ride</h2>
-        <div className="flex gap40 gray mb">
-          <p>2 days 3 nights</p>
-          <p>4-6 guest</p>
-        </div>
-        <div className="flex sb ai gap">
-          <p> <span className="bold">$48.25</span> <span className="gray">/ person</span></p>
-          <button>Book Now</button>
-        </div>
-      </div>
-    </div>
-    <div className="card-con">
-      <div className="rrr flex flex-dir"><img src={fSix} alt /></div>
-      <div className="card-bot">
-        <h2>Monterey Bay Sunset Wildlife Trip Tour</h2>
-        <div className="flex gap40 gray mb">
-          <p>2 days 3 nights</p>
-          <p>4-6 guest</p>
-        </div>
-        <div className="flex sb ai gap">
-          <p> <span className="bold">$48.25</span> <span className="gray">/ person</span></p>
-          <button>Book Now</button>
-        </div>
-      </div>
-    </div>
+    ))}
   </section>
   {/* featured card page ends here */}
   {/* defining page starts here */}
@@ -317,51 +203,45 @@ function Home() {
   {/* family tour page starts here */}
   <section className="con ">
     <div className="father">
-      <div className="son a relative">
-        <img style={{height: 342}} className="www" src={tone} alt />
-        <div className="absolute jj">
-          <p className="cursive">Honeymoon Tour</p>
-          <h2>Eternal Love Begins Here</h2>
-          <p className="ss">2 Country &amp; 15 Location</p>
-          <button className="goku-son">View This Trip</button>
+  {tourPackage.map((tour, index) => {
+    const letterClass = layoutClasses[index];
+    const isMiddleCard = index === 1 || index === 2;
+    const innerClass = isMiddleCard ? "absolute mm flex" : "absolute jj";
+
+    return (
+      <div className={`son ${letterClass} relative`} key={tour.id}>
+        <img 
+          className="www" 
+          src={tour.image} 
+          alt={tour.title} 
+          style={index === 0 || index === 3 ? { height: 342 } : {}} 
+        />
+        
+        <div className={innerClass}>
+          {isMiddleCard ? (
+            <>
+              <div>
+                <p className="cursive">{tour.title}</p>
+                <h2>{tour.heading}</h2>
+                <p className="ss">{tour.des}</p>
+              </div>
+              <div>
+                <button className="goku-son1">{tour.button}</button>
+              </div>
+            </>
+          ) : (
+            <>
+              <p className="cursive">{tour.title}</p>
+              <h2>{tour.heading}</h2>
+              <p className="ss">{tour.des}</p>
+              <button className="goku-son">{tour.button}</button>
+            </>
+          )}
         </div>
       </div>
-      <div className="son b relative">
-        <img className="www" src={ttwo} alt />
-        <div className="absolute mm flex">
-          <div>
-            <p className="cursive">Family Tour</p>
-            <h2>Family Tour Deal</h2>
-            <p className="ss">2 Country &amp; 10 Locations</p>
-          </div>
-          <div>
-            <button className="goku-son1">View This Trip</button>
-          </div>
-        </div>
-      </div>
-      <div className="son c relative">
-        <img className="www" src={tthree} alt />
-        <div className="absolute mm flex">
-          <div>
-            <p className="cursive">Adventure Tour</p>
-            <h2>Adventure Fun</h2>
-            <p className="ss">4 Country &amp; 25 Location</p>
-          </div>
-          <div>
-            <button style={{marginLeft: 40}} className="goku-son1">View This Trip</button>
-          </div>
-        </div>
-      </div>
-      <div className="son d relative">
-        <img style={{height: 342}} className="www" src={tfour} alt />
-        <div className="absolute jj uu">
-          <p className="cursive">Luxury Escape</p>
-          <h2>Enjoy 10% Off </h2>
-          <p className="ss">3 Country &amp; 12 Location</p>
-          <button className="goku-son">View This Trip</button>
-        </div>
-      </div>
-    </div>
+    );
+  })}
+</div>
   </section>
   {/* family tour page ends here */}
   <div className="con">

@@ -1,3 +1,4 @@
+
 *{ margin: 0; padding: 0; box-sizing: border-box;}
 ul{ list-style: none;}
 a{ text-decoration: none;}
@@ -417,12 +418,6 @@ header button{
     transition: transform 0.5s ease;
     transform-origin: left center;
 }
-/* .def img{
-    width: auto;
-    height: 530px;
-    object-fit: cover;
-    padding-right: 45px;
-} */
 .def h2{
     font-size: 46px;
     font-weight: 700;
@@ -673,7 +668,6 @@ footer{
 }
 .cc h2{
     padding-bottom: 20px;
-    /* margin-top: 40px; */
 }
 .eer h2{
     padding-bottom: 20px;
@@ -786,6 +780,7 @@ footer{
      background-color: rgb(10 138 177);
     cursor: pointer;
 }
+
 .mik img{
     width: 170px;
     height: 236px;
@@ -793,12 +788,17 @@ footer{
     border-radius: 130px;
     overflow: hidden;
     padding: 8px;
+    margin-top: 4px;
+    margin-left: 2px;
     transition: transform 0.4s ease;
     cursor: pointer;
+    filter: brightness(0.8) saturate(1.2);
+    transition: filter 0.3s ease;
 }
 .mik img:hover{
     outline: 2px solid rgb(10 138 177);
-    transform: scale(1.05);
+    transform: scale(1);
+     filter: brightness(1);
 }
 
 .mik p{
@@ -815,6 +815,7 @@ footer{
 }
 .mik h3:hover{
     color: rgb(10 138 177);
+    
 }
 .pika{
     background-color: #E6F8FE;
