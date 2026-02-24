@@ -20,7 +20,13 @@ h1,h2,h3,h4,h5,h6,button,a{
     margin: auto;
     align-items: center;
     gap: 20px;
+}
 
+.con99{
+    max-width: 1200px;
+    margin: auto;
+    align-items: center;
+    gap: 20px;
 }
 .con1{
     max-width: 1200px;
@@ -131,24 +137,32 @@ header button{
 .hero{
     background-image: url(/image/heroleft.jpg);
     background-size: cover;
+    background-position: center;
     height: 100vh;
-    width: auto;
+    width: 100%;
     position: relative;
     overflow: hidden;
 }
-.hero-right{
+.hero-right {
     background-image: url(/image/heroright.jpg);
-   background-size: contain; 
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 0;
-  right: -60px;
-  height: 100vh;
-  width: 50%;
- border-top-left-radius: 48%;
-
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 50%;
+    border-top-left-radius: 48%;
+    z-index: 1;
 }
+
 .dis{
+    padding-top: 150px;
+    padding-left: 120px;
+}
+
+.diss{
     padding-top: 150px;
     padding-left: 120px;
 }
@@ -251,10 +265,16 @@ header button{
 .gg 
 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr 1fr; */
     gap: 5px;
 }
 
+.ggg 
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+}
 .pop h1{
     font-size: 46px;
     padding-top: 24px ;
@@ -311,13 +331,13 @@ header button{
 .pop-des h2{
     padding: 10px 0;
 }
-.kk{
+/* .kk{
     border: 1px solid gray;
-    padding: 16px;
+    padding: 16px 0;
     border-radius: 12px;
     overflow: hidden;
 
-}
+} */
 .rr{
     border: none;
     height: 400px;
@@ -337,6 +357,10 @@ header button{
     transform: scale(1);
 }
 
+
+.menu{
+    display: none;
+}
 .feat-btn1{
     color: black;
     background-color: rgb(0 183 241 / 30%);
@@ -379,6 +403,9 @@ header button{
     width: 400px;
     padding-left: 12px;
 }
+.umm{
+   width: 370px;
+}
 .gray{
     color: gray;
 }
@@ -396,6 +423,10 @@ header button{
     cursor: pointer;
     margin-right: 34px;
 
+ }
+ .dell,
+ .dell1{
+    display: none;
  }
  .card-con button:hover{
     background: rgb(10 138 177);
@@ -851,12 +882,13 @@ footer{
 }
 
 .kk{
-    width: 339px;
+    width: 392px;
+    /* height: 450px; */
     border: none;
     padding: 10px;
     font-size: 16px;
     outline: none;
-    margin-left: 22px;
+    /* margin-left: 22px; */
     background-color: transparent;
 }
 
@@ -878,7 +910,3 @@ footer{
     cursor: pointer;
     background-color: rgb(10 138 177);
 }
-
-/* @media (max-width: 1000px){
-    
-} */

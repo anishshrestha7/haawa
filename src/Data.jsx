@@ -14,10 +14,10 @@ export let gTours=[
 ]
 
 export let tourPackage=[
-    {id:1,title:"Honeymoon Tour",heading:"Eternal Love Begins Here",des:"2 Country &amp; 15 Location",button:"View This Trip",image:"/tour/1.jpg"},
-    {id:2,title:"Family Tour",heading:"Family Tour Deal",des:"2 Country &amp; 10 Location",button:"View This Trip",image:"/tour/2.jpg"},
-    {id:3,title:"Adventure Tour",heading:"Adventure Fun",des:"4 Country &amp; 25 Location",button:"View This Trip",image:"/tour/3.jpg"},
-    {id:4,title:"Luxury Escape",heading:"Enjoy 10% Off",des:"3 Country &amp; 12 Location",button:"View This Trip",image:"/tour/4.jpg"},
+    {id:1,title:"Honeymoon Tour",heading:"Eternal Love Begins Here",des:"2 Country & 15 Location",button:"View This Trip",image:"/tour/1.jpg"},
+    {id:2,title:"Family Tour",heading:"Family Tour Deal",des:"2 Country & 10 Location",button:"View This Trip",image:"/tour/2.jpg"},
+    {id:3,title:"Adventure Tour",heading:"Adventure Fun",des:"4 Country & 25 Location",button:"View This Trip",image:"/tour/3.jpg"},
+    {id:4,title:"Luxury Escape",heading:"Enjoy 10% Off",des:"3 Country & 12 Location",button:"View This Trip",image:"/tour/4.jpg"},
 ]
 
 export let desTours=[

@@ -8,7 +8,7 @@ function Footer() {
     <div>
   <footer>
     <div className="con py bb">
-      <div className="flex ai sb">
+      <div className="flex ai sb mom">
         <img src={fLogo} alt />
         <div>
           <p>Need help? Call us 1-800-222-8888</p>
@@ -19,7 +19,7 @@ function Footer() {
       <div className="container-footer grid cc gtc11">
         <div>
           <h2>Contact Us</h2>
-          <p><span className="dd1"><i className="bi bi-geo-alt" /></span> 4517 Washington Ave. Manchester, Kentucky 39495</p>
+          <p className='was'><span className="dd1"><i className="bi bi-geo-alt" /></span> 4517 Washington Ave. Manchester, Kentucky 39495</p>
           <p className="aab"><span className="dd2"><i className="bi bi-clock" /></span>Hours: 8:00 - 17:00, Mon - Sat</p>
           <p><span className="dd2"><i className="bi bi-envelope" /></span>support@email.com</p>
           <h2>Follow us</h2>
@@ -39,7 +39,7 @@ function Footer() {
             <p>Contact Us</p>
             <p>Our Awards</p>
           </div>
-          <div>
+          <div className='bee'>
             <h2>Services</h2>
             <p>Tour Guide</p>
             <p>Tour Booking</p>

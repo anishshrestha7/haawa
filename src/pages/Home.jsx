@@ -14,7 +14,7 @@ function Home() {
     <>
      <div>
   <section className="hero">
-    <div className="grid dis">
+    <div className="grid diss">
       <h1>Discover The World Enjoy <br /> The Journey Feel Alive.</h1>
       <p>It inspires you to explore new places and cultures, embrace every <br />moment, and feel truly alive.</p>
       <div className="flex ai">
@@ -38,8 +38,8 @@ function Home() {
   {/* hero section end */}
   {/* travel page starts here */}
   <section className="con1">
-    <div className="hero-feat gg margin">
-      <div className="flex ">
+    <div className="hero-feat ggg margin">
+      <div className="flex mex1">
         <div className="pl">
           <i className="bi bi-airplane-fill" />
         </div>
@@ -57,7 +57,7 @@ function Home() {
           <p>Plan freely and adapt your journey with options tailored to your style.</p>
         </div>
       </div>
-      <div className="flex ">
+      <div className="flex mex">
         <div className="pl">
           <i className="bi bi-luggage-fill" />
         </div>
@@ -71,7 +71,7 @@ function Home() {
   {/* popular page starts here */}
   <section className="pop con">
     <h1>Explore Our Popular Destinations</h1>
-    <div className="flex sb ai mb">
+    <div className="flex sb ai mb mix">
       <p>Favorite destinations based on customer reviews</p>
       <button>View All</button>
     </div>
@@ -96,11 +96,12 @@ function Home() {
       </div>
        ))}
     </div>
+        <button className='dell'>View All</button>
   </section>
   {/* featured tours page starts here */}
   <section className="pop con">
     <h1>Our Featured Tours</h1>
-    <div className="flex sb ai mb">
+    <div className="flex sb ai mb rig">
       <p>Favorite destinations based on customer reviews</p>
       <button>View All Package</button>
     </div>
@@ -115,21 +116,19 @@ function Home() {
     </div>
   </section>
   {/* featured card page starts here */}
-  <section className="con gg ">
-
-
+  <section className="con ggg tea">
        {gTours.map((a)=>(
     <div className="card-con" key={a.id}>
       <div className="rrr flex flex-dir">
         <img src={a.image} alt />
       </div>
       <div className="card-bot">
-        <h2>{a.name}</h2>
+        <h2 className='umm'>{a.name}</h2>
         <div className="flex gap40 gray mb">
           <p>{a.des}</p>
           <p>{a.des1}</p>
         </div>
-        <div className="flex sb ai gap">
+        <div className="flex sb ai gap buy">
           <p> <span className="bold">{a.price}</span> <span className="gray">{a.person}</span></p>
           <button>{a.button}</button>
         </div>
@@ -137,6 +136,8 @@ function Home() {
     </div>
     ))}
   </section>
+      <button className='dell1'>View All Package</button>
+
   {/* featured card page ends here */}
   {/* defining page starts here */}
 
@@ -180,7 +181,7 @@ function Home() {
   {/* defining page ends here */}
   {/* destination page starts here */}
   <section className="desti">
-    <div className="con py gtc5">
+    <div className="con99 py gtc5">
       <div>
         <h2>168k</h2>
         <p>Happy Clients</p>
@@ -201,7 +202,7 @@ function Home() {
   </section>
   {/* destination page ends here */}
   {/* family tour page starts here */}
-  <section className="con ">
+  <section className="con">
     <div className="father">
   {tourPackage.map((tour, index) => {
     const letterClass = layoutClasses[index];
@@ -211,9 +212,9 @@ function Home() {
     return (
       <div className={`son ${letterClass} relative`} key={tour.id}>
         <img 
-          className="www" 
-          src={tour.image} 
-          alt={tour.title} 
+         className={`www tour-image-${index}`} // Unique class per index
+     src={tour.image} 
+      alt={tour.title}
           style={index === 0 || index === 3 ? { height: 342 } : {}} 
         />
         

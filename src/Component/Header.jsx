@@ -6,18 +6,21 @@ function Header() {
   return (
     <>
     <header className="py ai sticky">
-  <div className="con grid gtc3">
-    <img src={flogo} alt="Company Logo" />
+  <div className="con grid gtc3 pin">
+    <img src={flogo}  alt="Company Logo" />
     <ul className="flex gap jc gap40">
       <li className='hover:text-white'><Link to="./">Home</Link></li>
       <li className='hover:text-white'><Link to="./Destination">Destination</Link></li>
-      <li className='hover:text-white'><a href="#">Blog</a></li>
-      <li className='hover:text-white'><a href="#">Pages</a></li>
-      <li className='hover:text-white'><a href="#">Contact</a></li>
+      <li className='hover:text-white'><Link to="./">Blog</Link></li>
+      <li className='hover:text-white'><Link to="./">Pages</Link></li>
+      <li className='hover:text-white'><Link to="./">Contact</Link></li>
     </ul>
-    <div className="flex gap20 ai">
+    <div className="flex gap20 ai pin1">
       <p>Region</p>
       <button>Login</button>
+    </div>
+    <div className='menu'>
+      <i class="fa-solid fa-bars-staggered"></i>
     </div>
   </div>
 </header>
